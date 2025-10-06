@@ -21,11 +21,12 @@ if [[ "$csv_file" = *.csv ]]; then
     echo "Processing..."
 fi
 
-file_path="CMEECourseWork/week1/data/$csv_file"
+file_path="week1/data/temperature/$csv_file"
 
-if [[ ! -f "$full_path" ]]; then
+if [[ ! -f "$file_path" ]]; then
     echo "No .csv file found under that input."
     exit 1
 fi
 
 echo "File found!"
+echo "Converting to space separated file."
