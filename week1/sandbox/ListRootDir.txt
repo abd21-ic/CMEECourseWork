@@ -1,0 +1,16 @@
+Applications
+bin
+cores
+dev
+etc
+home
+Library
+opt
+private
+sbin
+System
+tmp
+Users
+usr
+var
+Volumes
