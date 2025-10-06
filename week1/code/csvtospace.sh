@@ -15,14 +15,17 @@ echo "You have input:" $csv_file
 if [[ "$csv_file" != *.csv ]]; then
     echo "Input file must have a .csv extension."
     exit 1
- fi
+fi
 
- if [[ "$csv_file" = *.csv ]]; then
+if [[ "$csv_file" = *.csv ]]; then
     echo "Processing..."
-    exit 1
- fi
+fi
 
- if [[ "$csv_file" != *.csv ]]; then
-    echo "Input file must have a .csv extension or is not found"
+file_path="CMEECourseWork/week1/data/$csv_file"
+
+if [[ ! -f "$full_path" ]]; then
+    echo "No .csv file found under that input."
     exit 1
- fi
+fi
+
+echo "File found!"
