@@ -1,0 +1,13 @@
+#1 - wc ../data/fasta/407228326.fasta && wc ../data/fasta/407228412.fasta && wc ../data/fasta/E.coli.fasta
+#2 - tail -n +2 ../data/fasta/E.coli.fasta
+#3 - grep -v '^>' ../data/fasta/E.coli.fasta | tr -d '\n' | wc -c
+#4 - grep -v '^>' ../data/fasta/E.coli.fasta | tr -d '\n'| grep -o "ATGC" ../data/fasta/E.coli.fasta "ATGC" | wc -l
+#5 - seq=$(grep -v '^>' ../data/fasta/E.coli.fasta | tr -d '\n')
+A=$(echo "$seq" | grep -o 'A' | wc -l)
+T=$(echo "$seq" | grep -o 'T' | wc -l)
+G=$(echo "$seq" | grep -o 'G' | wc -l)
+C=$(echo "$seq" | grep -o 'C' | wc -l)
+Y=$(echo "$seq" | grep -o 'Y' | wc -l)
+R=$(echo "$seq" | grep -o 'R' | wc -l)
+ATGC_ratio=$(echo "scale=3; ($A + $T + $Y + $R) / ($G + $C + $Y + $R)" | bc)
+echo $ATGC_ratio
