@@ -6,8 +6,6 @@
 # Saves the output into a .csv file
 # Arguments: 1 -> tab delimited file
 #
-# Practical: Write a csvtospace.sh shell script that takes a comma separated values and converts it to a space separated values file. However, it must not change the input file — it should save it as a differently named file.
-#
 # Date: October 2025
 
 
