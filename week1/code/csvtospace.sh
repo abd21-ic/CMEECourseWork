@@ -31,7 +31,8 @@ fi
 echo "File found!"
 echo "Converting to space separated file."
 
-output_file="${csv_file%.csv}.txt"
+output_file="week1/data/temperature/${csv_file%.csv}.txt"
 
 tr ',' ' ' < "$file_path" > "$output_file"
 
+echo "Converted file saved in: $output_file"
