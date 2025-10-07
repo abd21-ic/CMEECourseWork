@@ -6,8 +6,6 @@
 #
 # Date: October 2025
 
-csv_file=""
-
 echo "Please enter a csv file name:"   
 read csv_file
 echo "You have input:" $csv_file
