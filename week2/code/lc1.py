@@ -28,5 +28,33 @@ latin_names = ['Passerculus sandwichensis',
 ]
 print("Latin names:", latin_names)
 
+common_names = ['Savannah sparrow',
+'House martin',
+'Yellow-eyed junco',
+'Dark-eyed junco',
+'Tree swallow',
+]
 
- 
+print("Common names:", common_names)
+
+mean_body_masses = [18.7, 19, 19.5, 19.6, 20.2]
+
+print("Mean body masses:", mean_body_masses)
+
+
+ ###STEP 2###
+
+latin_names = []
+for i in birds:
+    latin_names.append(i[0])
+print("Latin names:",latin_names)
+
+common_names = []
+for i in birds:
+    common_names.append(i[1])
+print("Common names:",common_names)
+
+mean_body_masses = []
+for i in birds:
+    mean_body_masses.append(i[2])
+print("Mean body masses:",mean_body_masses)
