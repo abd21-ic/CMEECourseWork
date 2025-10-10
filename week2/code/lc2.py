@@ -21,7 +21,29 @@ rainfall = (('JAN',111.4),
 # amount of rain was less than 50 mm. 
 
 # (3) Now do (1) and (2) using conventional loops (you can choose to do 
-# this before 1 and 2 !). 
+# this before 1 and 2 !).
+
+###STEP 1###
+rainfall_months_over_100 = [(i[0], i[1]) for i in rainfall if i[1] > 100]
+print("Months and rainfall values when the amount of rain was greater than 100mm:",rainfall_months_over_100)
+
+###STEP 2###
+rainfall_months_under_50 = [(i[0], i[1]) for i in rainfall if i[1] < 50]
+print("Months and rainfall values when the amount of rain was less than 50mm:", rainfall_months_under_50)
+
+###STEP 3###
+rainfall_months_over_100 = []
+for i in rainfall:
+     if i[1] > 100:
+        rainfall_months_over_100.append((i[0], i[1]))
+print("Months and rainfall values when the amount of rain was greater than 100mm:",rainfall_months_over_100)
+
+rainfall_months_under_50 = []
+for i in rainfall:
+     if i[1] < 50:
+        rainfall_months_under_50.append((i[0], i[1]))
+print("Months and rainfall values when the amount of rain was less than 50mm:", rainfall_months_under_50)
+
 
 # A good example output is:
 #
