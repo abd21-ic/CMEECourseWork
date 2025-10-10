@@ -20,26 +20,14 @@ birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
 
 ###STEP 1###
 
-latin_names = ['Passerculus sandwichensis',
-'Delichon urbica',
-'Junco phaeonotus',
-'Junco hyemalis',
-'Tachycineata bicolor',
-]
-print("Latin names:", latin_names)
+latin_names = [i[0] for i in birds]
+print("Latin names:",latin_names)
 
-common_names = ['Savannah sparrow',
-'House martin',
-'Yellow-eyed junco',
-'Dark-eyed junco',
-'Tree swallow',
-]
+common_names = [i[1] for i in birds]
+print("Common names:",common_names)
 
-print("Common names:", common_names)
-
-mean_body_masses = [18.7, 19, 19.5, 19.6, 20.2]
-
-print("Mean body masses:", mean_body_masses)
+mean_body_masses = [i[2] for i in birds]
+print("Mean body masses:",mean_body_masses)
 
 
  ###STEP 2###
