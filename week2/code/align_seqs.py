@@ -1,6 +1,17 @@
 # Two example sequences to match
-seq2 = "ATCGCCGGATTACGGG"
-seq1 = "CAATTCGGAT"
+
+#seq2 = "ATCGCCGGATTACGGG"
+#seq1 = "CAATTCGGAT"
+
+#Single external file input (.csv)
+def file_sequence(x):
+    with open(x, 'r') as file:
+        lines = file.readlines()  # Remove whitespace and spaces
+        seq1 = lines[1].split(",")[1].strip()
+        seq2 = lines[2].split(",")[1].strip()
+    return seq1, seq2
+
+seq1, seq2 = file_sequence("../data/combined_file.csv") #Combined csv file with two fasta sequences
 
 # Assign the longer sequence s1, and the shorter to s2
 # l1 is length of the longest, l2 that of the shortest
@@ -29,11 +40,11 @@ def calculate_score(s1, s2, l1, l2, startpoint):
                 matched = matched + "-"
 
     # some formatted output
-    print("." * startpoint + matched)           
-    print("." * startpoint + s2)
-    print(s1)
-    print(score) 
-    print(" ")
+    #print("." * startpoint + matched)           
+    #print("." * startpoint + s2)
+    #print(s1)
+    #print(score) 
+    #print(" ")
 
     return score
 
@@ -46,11 +57,15 @@ def calculate_score(s1, s2, l1, l2, startpoint):
 my_best_align = None
 my_best_score = -1
 
-for i in range(l1): # Note that you just take the last alignment with the highest score
+for i in range(l1):
     z = calculate_score(s1, s2, l1, l2, i)
     if z > my_best_score:
-        my_best_align = "." * i + s2 # think about what this is doing!
+        my_best_align = "." * i + s2
         my_best_score = z 
 print(my_best_align)
-print(s1)
 print("Best score:", my_best_score)
+
+#Write to external text file
+with open("../results/score.txt", "w") as file:
+    file.write("Best alignment: " + my_best_align + "\n")
+    file.write("Best score: " + str(my_best_score))
