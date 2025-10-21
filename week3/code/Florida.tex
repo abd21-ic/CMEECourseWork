@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Is Florida Getting Warmer?}
+\author{An Dao}
+\date{October 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Results}
+We imported the Key West Annual Mean Temperature data given to us, and calulated a correlation coefficient. We then randomised the years and the temperatures in a million samples and performed a correlation test for each of the samples. We then compared the correlations between the sample set and the Florida data to calulated a rudimentary p-value.
+
+\section{Results}
+Having imported the Key West Annual Mean Temperature data (the basis for our Florida data), there was a correlation of:
+
+\[ 0.5331784 \]
+
+Out of one million random samples of temperatures and years, taken from the Florida data, not a single sample had a correlation greater than the Florida correlation.
+
+\section{Interpretation}
+The Florida data is statistically significant as the rudimentary p-value is lower than 0.05. Any null hypothesis (there is no correlation between temperature and years in the Florida data) can be rejected.
+
+\end{document}
