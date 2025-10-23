@@ -4,5 +4,9 @@ sandbox/
 .DS_Store
 */__pycache__
 */.RData
+.RData
 */.Rhistory
+.Rhistory
 myenv/
+.DS_Store
+*/.DS_Store
