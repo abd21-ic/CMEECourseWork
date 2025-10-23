@@ -1,9 +1,14 @@
+#!/usr/bin/env python3
+
 # Two example sequences to match
 
 #seq2 = "ATCGCCGGATTACGGG"
 #seq1 = "CAATTCGGAT"
 
 #Single external file input (.csv)
+
+import sys
+
 def file_sequence(x):
     with open(x, 'r') as file:
         lines = file.readlines()  # Remove whitespace and spaces
@@ -69,3 +74,10 @@ print("Best score:", my_best_score)
 with open("../results/score.txt", "w") as file:
     file.write("Best alignment: " + my_best_align + "\n")
     file.write("Best score: " + str(my_best_score))
+
+def main(argv):
+    return 0
+
+if __name__ == "__main__": 
+    status = main(sys.argv)
+    sys.exit(status)
