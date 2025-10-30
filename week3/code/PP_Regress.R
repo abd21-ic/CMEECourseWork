@@ -24,6 +24,8 @@ p <- p + facet_wrap(Type.of.feeding.interaction ~., ncol = 1, strip.position = "
   guides(color = guide_legend(nrow = 1))
 print(p)
 
+ggsave("../results/PP_Regress_Figure.pdf", width = 8, height = 11)
+
 regs <- my_data %>%
   group_by(Type.of.feeding.interaction, Predator.lifestage) %>%
   summarise({
