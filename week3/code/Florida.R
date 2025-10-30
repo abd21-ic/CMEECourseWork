@@ -15,5 +15,7 @@ for (i in 1:1000000) {
     SampleCorrelation[i] <- cor(SampleYear, SampleTemp) #correlates sample tempetature with random year and calulates correlation
 }
 
+hist(SampleCorrelation)
+
 Pvalue <- sum(abs(SampleCorrelation > FloridaTempCorrelation)) #Tests for any sample with greater correlation than data observed.
 Pvalue

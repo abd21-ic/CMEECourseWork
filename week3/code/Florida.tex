@@ -10,14 +10,18 @@
 \maketitle
 
 \section{Results}
-We imported the Key West Annual Mean Temperature data given to us, and calulated a correlation coefficient. We then randomised the years and the temperatures in a million samples and performed a correlation test for each of the samples. We then compared the correlations between the sample set and the Florida data to calulated a rudimentary p-value.
-
-\section{Results}
 Having imported the Key West Annual Mean Temperature data (the basis for our Florida data), there was a correlation of:
 
 \[ 0.5331784 \]
 
-Out of one million random samples of temperatures and years, taken from the Florida data, not a single sample had a correlation greater than the Florida correlation.
+Out of one million random samples of temperatures and years, taken from the Florida data, not a single sample had a correlation greater than the Florida correlation (Figure 1).
+
+\begin{figure}[h]
+\begin{center}
+    \includegraphics[width=.5\textwidth]{images/Histogram.png}\hfill
+\end{center}
+    \caption{Histogram of sampled correlations. Florida correlation is 0.53.}
+\end{figure}
 
 \section{Interpretation}
 The Florida data is statistically significant as the rudimentary p-value is lower than 0.05. Any null hypothesis (there is no correlation between temperature and years in the Florida data) can be rejected.
