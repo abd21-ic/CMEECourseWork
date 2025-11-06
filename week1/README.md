@@ -5,7 +5,7 @@
 * Task 2 - csv to space excercise (csvtospace.sh | data/Temperature)
 * Task 3 - Improving scripts (CountLines.sh | ConcatenateTwoFiles.sh | tiff2png.sh)
 
-All of these tasks were answered in UnixPrac1.txt
+All of these tasks were answered in code/UnixPrac1.txt
 
 ## Example script functions
 Mostly beginner scripts for shellscripting:
