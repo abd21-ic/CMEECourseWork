@@ -23,6 +23,10 @@ echo
 ## Assinged Variables; Reading (multiple values) from user inputs:
 echo 'Enter two numbers separates by space(s)'
 read a b
+if [ -z "$a" ] || [ -z "$b" ]; then
+  echo "Error: you must enter two numbers."
+  exit 1
+fi
 echo 'you entered' $a 'and' $b '; Their sum is:'
 
 ## Assinged Variables: Command substitution
