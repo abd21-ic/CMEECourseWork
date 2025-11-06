@@ -1,16 +1,23 @@
 import csv
 import sys
-import doctest
+import os
+import difflib
 
 #Define function
 def is_an_oak(name):
-    return name.lower().startswith('quercus') # typo here with "quercus"
-
-import ipdb; ipdb.set_trace()
+    """ 
+    Returns True if the genus is 'Quercus' (case-insensitive).
+    Allows minor typos (like one-character mistakes).
+    """
+    name = name.strip().lower()
+    genus = name.split(" ")[0]
+    # Find the similarity ratio between input and "quercus"
+    similarity = difflib.SequenceMatcher(None, genus, "quercus").ratio()
+    return similarity > 0.8  # accept if more than 80% similar
 
 def main(argv): 
     f = open('../data/TestOaksData.csv','r')
-    g = open('../data/JustOaksData.csv','w')
+    g = open('../results/JustOaksData.csv','w')
     taxa = csv.reader(f)
     csvwrite = csv.writer(g)
     oaks = set()
@@ -28,5 +35,3 @@ def main(argv):
 
 if (__name__ == "__main__"):
     status = main(sys.argv)
-
-doctest.testmod()
