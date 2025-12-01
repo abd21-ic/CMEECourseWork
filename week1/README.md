@@ -38,7 +38,7 @@ For this practical, we wrote a shellscript that changed a .csv file to a space s
 **Script Purpose:**
 * csvtospace.sh
 
-Changes .csv input file to space separated file, saves it in data/temperature and does not change the input file.
+Changes .csv input file to space separated file, saves it in `../results` but does not change the input file.
 
 **Usage:** bash csvtospace.sh
 
@@ -80,9 +80,6 @@ Converts a .tiff file into a .png file. Exits if the file does not match the .ti
 
 ## Non-Task Scripts
 
-**All scripts are located in the code directory.**
-
----
 * boilerplate.sh
 
 Simple boilerplate template for creating shell scripts. Prints out "*This is a shell script!*".
