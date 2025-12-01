@@ -23,7 +23,7 @@ if [[ "$csv_file" = *.csv ]]; then
 fi
 
 # construct full path to input file
-file_path="week1/data/temperature/$csv_file"
+file_path="../data/temperature/$csv_file"
 
 # check file exists in expected directory
 if [[ ! -f "$file_path" ]]; then
@@ -35,7 +35,7 @@ echo "File found!"
 echo "Converting to space separated file."
 
 # replace .csv with .txt
-output_file="week1/data/temperature/${csv_file%.csv}.txt"
+output_file="../results/${csv_file%.csv}.txt"
 
 # change commas to spaces and write to the output file
 tr ',' ' ' < "$file_path" > "$output_file"

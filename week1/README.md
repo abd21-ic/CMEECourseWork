@@ -6,12 +6,12 @@ This week builds up confidence with Shellscripting, UNIX command line and termin
 
 ### Task 1 — FASTA Exercise
 **Files:**
-* data/fasta/407228326.fasta
-* data/fasta/407228412.fasta
-* data/fasta/E.coli.fasta
+* ../data/fasta/407228326.fasta
+* ../data/fasta/407228412.fasta
+* ../data/fasta/E.coli.fasta
 
 **All of these tasks were answered in a text file:**
-* code/UnixPrac1.txt
+* UnixPrac1.txt
 
 
 
@@ -23,8 +23,11 @@ For this practical, we began to familiarise ourselves with shellscripting comman
 
 ### Task 2 — csv to space Excercise
 **Files:**
-* code/csvtospace.sh
-* data/temperature/
+* csvtospace.sh
+* ../data/temperature/1800.csv
+* ../data/temperature/1801.csv
+* ../data/temperature/1802.csv
+* ../data/temperature/1803.csv
 
 **Task Description:**
 
@@ -33,7 +36,7 @@ For this practical, we wrote a shellscript that changed a .csv file to a space s
 ---
 
 **Script Purpose:**
-* code/csvtospace.sh
+* csvtospace.sh
 
 Changes .csv input file to space separated file, saves it in data/temperature and does not change the input file.
 
@@ -44,9 +47,9 @@ Changes .csv input file to space separated file, saves it in data/temperature an
 
 ### Task 3 — Improving scripts
 **Files:**
-* code/CountLines.sh
-* code/ConcatenateTwoFiles.sh
-* code/tiff2png.sh
+* CountLines.sh
+* ConcatenateTwoFiles.sh
+* tiff2png.sh
 
 **Description:**
 
@@ -55,15 +58,15 @@ For this practical, we made each script robust so it gives feedback to the user 
 ---
 
 **Script Purpose:**
-* code/CountLines.sh
+* CountLines.sh
 
 Counts the number of lines in an input file and exits if filename does not exist.
 
-* code/ConcatenateTwoFiles.sh
+* ConcatenateTwoFiles.sh
 
 Concatenates the content of two files. Exits if no file was found for either. Allows user to name the new combined file.
 
-* code/tiff2png.sh
+* tiff2png.sh
 
 Converts a .tiff file into a .png file. Exits if the file does not match the .tif extension.
 
@@ -111,24 +114,24 @@ Script which compiles *FirstExample.tex* and cleanups any auxillary files.
 
 ## Other Files
 
-* code/FirstExample.tex
+* FirstExample.tex
 
 Latex file which has our first example of a latex document. Contains a standard template for scientific writing and has a reference.
 
 ---
 
-* code/FirstBiblio.bib
+* FirstBiblio.bib
 
 Bibolography where the reference which *FirstExample.tex* calls on uses.
 
 ---
 
-* code/FirstExample.pdf
+* FirstExample.pdf
 
 Compiled .pdf file from the latex code *FirstExample.tex*.
 
 ---
 
-* data/spawannxs.txt
+* ../data/spawannxs.txt
 
-This is a list of protected species of marine and coastal flora. This was used when using the *grep* terminal command. 
+This is a list of protected species of marine and coastal flora. This was used when using the *grep* terminal command.
