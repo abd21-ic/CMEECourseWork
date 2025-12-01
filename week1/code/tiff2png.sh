@@ -12,9 +12,11 @@
 #        convert "$f" "$(basename "f" .tif).png";
 #    done
 
+# input from user
 echo "Please enter the .tif file to convert to .png:"  
 read f
 
+# error messages for invalid input
 if [[ "$f" != *.tif ]]; then
     echo "Input file must have a .tif extension."
     exit 1
@@ -27,5 +29,6 @@ if [[ ! -f "$file_path" ]]; then
     exit 1
 fi
 
+# converting file
 echo "Converting $f"; 
 convert "$file_path" "week1/data/$(basename "$f" .tif).png"

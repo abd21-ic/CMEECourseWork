@@ -5,11 +5,22 @@
 #
 # Date: October 2025
 
-if [ -z "$1" ]; then
+
+# input file 
+read -p "Enter a filename: " filename
+
+# error messages 
+if [ -z "$filename" ]; then
   echo "Error: No filename supplied"
   exit 1
 fi
 
-NumLines=`wc -l < $1`
-echo "The file $1 has $NumLines lines"
+if [ ! -f "$filename" ]; then
+  echo "Error: File does not exist"
+  exit 1
+fi
+
+# count number of lines
+NumLines=$(wc -l < "$filename")
+echo "The file $filename has $NumLines lines"
 echo
