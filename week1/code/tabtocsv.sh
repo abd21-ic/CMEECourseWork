@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Author: abd21@ic.ac.uk
 # Script: tabtocsv.sh
 # Descripton: substitute the tabs in files with commas

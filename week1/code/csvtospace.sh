@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Author: abd21@ic.ac.uk
 # Script: csvtospace.sh
 # Descripton: change .csv to space separated file

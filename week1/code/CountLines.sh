@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 # Author: abd21@ic.ac.uk
-# Script: CountLines.sh
+# Script: countlines.sh
 # Descripton: count the number of lines in a file
 #
 # Date: October 2025

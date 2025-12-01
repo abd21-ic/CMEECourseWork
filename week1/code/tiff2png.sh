@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Author: abd21@ic.ac.uk
 # Script: tiff2png.sh
 # Descripton: Convert tiff file to png file

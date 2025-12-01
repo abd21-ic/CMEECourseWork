@@ -11,7 +11,7 @@ This week builds up confidence with Shellscripting, UNIX command line and termin
 * ../data/fasta/E.coli.fasta
 
 **All of these tasks were answered in a text file:**
-* UnixPrac1.txt
+* unixprac1.txt
 
 
 
@@ -31,14 +31,14 @@ For this practical, we began to familiarise ourselves with shellscripting comman
 
 **Task Description:**
 
-For this practical, we wrote a shellscript that changed a .csv file to a space space separated values file that did not change the input file. It can handle wrong and missing inputs.
+For this practical, we wrote a shellscript that changed a `.csv` file to a space space separated values file that did not change the input file. It can handle wrong and missing inputs.
 
 ---
 
 **Script Purpose:**
 * csvtospace.sh
 
-Changes .csv input file to space separated file, saves it in `../results` but does not change the input file.
+Changes `.csv` input file to space separated file, saves it in `../results` but does not change the input file.
 
 **Usage:** bash csvtospace.sh
 
@@ -47,8 +47,8 @@ Changes .csv input file to space separated file, saves it in `../results` but do
 
 ### Task 3 — Improving scripts
 **Files:**
-* CountLines.sh
-* ConcatenateTwoFiles.sh
+* countlines.sh
+* concatenatetwofiles.sh
 * tiff2png.sh
 
 **Description:**
@@ -58,21 +58,21 @@ For this practical, we made each script robust so it gives feedback to the user 
 ---
 
 **Script Purpose:**
-* CountLines.sh
+* countlines.sh
 
 Counts the number of lines in an input file and exits if filename does not exist.
 
-* ConcatenateTwoFiles.sh
+* concatenatetwofiles.sh
 
 Concatenates the content of two files. Exits if no file was found for either. Allows user to name the new combined file.
 
 * tiff2png.sh
 
-Converts a .tiff file into a .png file. Exits if the file does not match the .tif extension.
+Converts a `.tiff` file into a `.png` file. Exits if the file does not match the `.tiff` extension.
 
 **Usage:**
-* bash CountLines.sh
-* bash ConcatenateTwoFiles.sh
+* bash countlines.sh
+* bash concatenatetwofiles.sh
 * bash tiff2png.sh
 
 
@@ -82,12 +82,12 @@ Converts a .tiff file into a .png file. Exits if the file does not match the .ti
 
 * boilerplate.sh
 
-Simple boilerplate template for creating shell scripts. Prints out "*This is a shell script!*".
+Simple boilerplate template for creating shell scripts. Prints out "This is a shell script!".
 
 **Usage:** bash boilerplate.sh
 
 ---
-* MyExampleScript.sh
+* myexamplescript.sh
 
 Shell script defines variables and prints to print messages to the terminal based on system username.
 
@@ -101,12 +101,12 @@ Shell script which performs basic arithmetic operations from inputs. Also does c
 **Usage:** bash variables.sh 1 two
 
 ---
-* CompileLaTeX.sh
+* compilelatex.sh
 
 
-Script which compiles *FirstExample.tex* and cleanups any auxillary files.
+Script which compiles LaTeX files and cleanups any auxillary files. Compiles the `.pdf` in `../results`.
 
-**Usage:** bash CompileLaTeX.sh FirstExample.tex
+**Usage:** bash compilelatex.sh FirstExample.tex
 
 
 ## Other Files
@@ -120,12 +120,6 @@ Latex file which has our first example of a latex document. Contains a standard 
 * FirstBiblio.bib
 
 Bibolography where the reference which *FirstExample.tex* calls on uses.
-
----
-
-* FirstExample.pdf
-
-Compiled .pdf file from the latex code *FirstExample.tex*.
 
 ---
 

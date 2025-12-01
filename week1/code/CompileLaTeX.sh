@@ -1,4 +1,9 @@
 #!/bin/bash
+# Author: abd21@ic.ac.uk
+# Script: compilelatex.sh
+# Desc: compile LaTeX file with bibtex
+# Date: Oct 2025
+
 #ORIGINAL CODE
 #pdflatex $1.tex
 #bibtex $1
@@ -14,7 +19,7 @@
 
 # check filename
 if [ -z "$1" ]; then
-    echo "Usage: bash CompileLaTeX.sh <filename.tex>"
+    echo "Usage: bash compilelatex.sh <filename.tex>"
     exit 1
 fi
 
@@ -30,6 +35,9 @@ pdflatex "$filename.tex"
 
 # open pdf viewer
 evince "$filename.pdf" &
+
+# move pdf to results directory
+mv "$filename.pdf" ../results/
 
 ## cleanup file
 rm -f "$filename.aux" "$filename.log" "$filename.bbl" "$filename.blg"

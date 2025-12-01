@@ -1,9 +1,9 @@
-#!/bin/zsh
+#!/bin/bash
 # Author: abd21@ic.ac.uk
-# Script: biolerplate.sh
+# Script: boilerplate.sh
 # Desc: simple boilerplate for shell scripts
 # Arguments: none
-# Date: Oct 20192025
+# Date: Oct 2025
 
 echo -e "\nThis is a shell script! \n"
 

@@ -1,8 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 # Author: abd21@ic.ac.uk
-# Script: ConcatenateTwoFiles.sh
+# Script: concatenatetwofiles.sh
 # Descripton: Concatenate contents of two files
-#
 # Date: October 2025
 
 # ORIGINAL CODE
