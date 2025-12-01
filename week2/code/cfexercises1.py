@@ -1,3 +1,8 @@
+__appname__ = 'cfexercises1.py'
+__author__ = 'An Dao (abd21@ic.ac.uk)'
+__version__ = '0.0.1'
+
+###ORIGINAL CODE###
 #def foo_1(x):
 #   return x ** 0.5
 #
@@ -36,13 +41,22 @@
 ###MODIFIED CODE###
 
 #1 - Square Root
+
+import sys
+
 def foo_1(x):
+    """ 
+    Returns the square root of a number.
+    """
     x = x ** 0.5
     print("The square root of this number is:", x)
     return x
 
-#2 - Two number Cmparison
+#2 - Two number comparison
 def foo_2(x, y):
+    """ 
+    Returns the square root of a number.
+    """
     if x > y:
         print ("Your first number (",x,") is greater than your second number (",y,")")
         return x
@@ -56,6 +70,9 @@ def foo_2(x, y):
 #3 - Three number compare
 
 def foo_3(x, y, z):
+    """ 
+    Returns the three numbers in ascending order.
+    """
     if x > y:
         x, y = y, z
         print("Your first number is bigger than your second number! Your first number is now your second number and your second number is now the third number.")
@@ -70,6 +87,9 @@ def foo_3(x, y, z):
 #4 - Factoral
 
 def foo_4(x):
+    """ 
+    Returns the factoral of a number.
+    """
     result = 1
     for i in range (1, x + 1):
         result = result * i
@@ -79,6 +99,9 @@ def foo_4(x):
 #5 - Factoral 2
 
 def foo_5(x):
+    """ 
+    Returns the factoral of a number.
+    """
     if x == 1:
         y = 1
     else:
@@ -88,6 +111,9 @@ def foo_5(x):
 
 #6 - Factoral 3
 def foo_6(x):
+    """ 
+    Returns the factoral of a number.
+    """
     y = x
     facto = 1
     while x >= 1:

@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+__appname__ = 'align_seqs.py'
+__author__ = 'An Dao (abd21@ic.ac.uk)'
+__version__ = '0.0.1'
+
 # Two example sequences to match
 
 #seq2 = "ATCGCCGGATTACGGG"
@@ -10,6 +14,9 @@
 import sys
 
 def file_sequence(x):
+    """
+    reads .csv file and extracts two DNA sequences.
+    """
     with open(x, 'r') as file:
         lines = file.readlines()  # Remove whitespace and spaces
         seq1 = lines[1].split(",")[1].strip()
@@ -34,6 +41,10 @@ else:
 # A function that computes a score by returning the number of matches starting
 # from arbitrary startpoint (chosen by user)
 def calculate_score(s1, s2, l1, l2, startpoint):
+    """
+    Compute a matching score for two sequences starting at a given alignment position.
+    Returns number of matching bases.
+    """
     matched = "" # to hold string displaying alignements
     score = 0
     for i in range(l2):

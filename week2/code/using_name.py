@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-# Filename: using_name.py
+__appname__ = 'using_name.py'
+__author__ = 'An Dao (abd21@ic.ac.uk)'
+__version__ = '0.0.1'
 
 if __name__ == '__main__':
     print('This program is being run by itself!')

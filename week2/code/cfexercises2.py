@@ -1,6 +1,12 @@
+__appname__ = 'cfexercises2.py'
+__author__ = 'An Dao (abd21@ic.ac.uk)'
+__version__ = '0.0.1'
 
-
+# Function 1
 def hello_1(x):
+    """ 
+    Prints "hello" for every number divisible by 3 up to x.
+    """
     for j in range(x):
         if j % 3 == 0:
             print('hello')
@@ -8,8 +14,11 @@ def hello_1(x):
 
 hello_1(12)
 
-
+# Function 2
 def hello_2(x):
+    """ 
+    Prints "hello" for every number up to x that gives a remainder of 3 when divided by 5 or 4.
+    """
     for j in range(x):
         if j % 5 == 3:
             print('hello')
@@ -19,16 +28,22 @@ def hello_2(x):
 
 hello_2(12)
 
-
+# Function 3
 def hello_3(x, y):
+    """ 
+    Prints "hello" for every number from x to y-1.
+    """
     for i in range(x, y):
         print('hello')
     print(' ')
 
 hello_3(3, 17)
 
-
+# Function 4
 def hello_4(x):
+    """ 
+    Prints "hello" while x is not equal to 15, incrementing x by 3 each time.
+    """
     while x != 15:
         print('hello')
         x = x + 3
@@ -37,7 +52,11 @@ def hello_4(x):
 hello_4(0)
 
 
+# Function 5
 def hello_5(x):
+    """ 
+    Prints "hello" for specific conditions while x is less than 100.
+    """
     while x < 100:
         if x == 31:
             for k in range(7):
@@ -50,7 +69,11 @@ def hello_5(x):
 hello_5(12)
 
 
+# Function 6
 def hello_6(x, y):
+    """ 
+    Prints "hello!" followed by the current value of y, increments y by 1, and breaks when y reaches 6, when x is True.
+    """
     while x: 
         print("hello! " + str(y))
         y += 1
