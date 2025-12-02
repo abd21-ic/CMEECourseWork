@@ -8,10 +8,13 @@ This week mainly focuses on R computing, involving handling datasets.
 **Files:**
 * TreeHeight.R
 * ../data/trees.csv
+* Florida.tex
+* images/Histogram.png
+* compilelatex.sh
 
 
 **Task Description:**
-Modification of the `TreeHeight.R` taken from *TheMulQuaBio* repo and create a `.csv` file in the `results` dictionary.
+Modification of the `TreeHeight.R` taken from *TheMulQuaBio* repo and create a `.csv` file in the `results` dictionary. The results were presented on a `.pdf` in the `results` dictionary.
 
 ---
 
@@ -22,6 +25,15 @@ R script which has a function which calculates heights of trees given distance o
 
 **Usage:**
 * Rscript TreeHeight.R
+
+---
+
+* compilelatex.sh
+
+A shell script (from week 1) that compiles the LaTeX file `Florida.tex` to `../results/Florida.pdf`. Cleans up any auxillary files. `Florida.tex` uses an image from `images/Histogram.png`.
+
+**Usage:**
+* bash compilelatex.sh Florida.tex
 
 ---
 
