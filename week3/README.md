@@ -10,7 +10,6 @@ This week mainly focuses on R computing, involving handling datasets.
 * ../data/trees.csv
 * Florida.tex
 * images/Histogram.png
-* compilelatex.sh
 
 
 **Task Description:**
@@ -28,12 +27,12 @@ R script which has a function which calculates heights of trees given distance o
 
 ---
 
-* compilelatex.sh
+* Florida.tex
 
-A shell script (from week 1) that compiles the LaTeX file `Florida.tex` to `../results/Florida.pdf`. Cleans up any auxillary files. `Florida.tex` uses an image from `images/Histogram.png`.
+The LaTeX file which we wrote to put our results from the previous script. Uses an image from `images/Histogram.png`.
 
 **Usage:**
-* bash compilelatex.sh Florida.tex
+* pdflatex Florida.tex
 
 ---
 
