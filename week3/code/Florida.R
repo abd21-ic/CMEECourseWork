@@ -1,3 +1,9 @@
+# Author: An Dao (abd21@ic.ac.uk)
+# Script: Florida.R
+# Desc:   Correlation test of Florida annual mean temperature data
+# Date:   October 2025
+#
+
 ###### Florida Correlation Data ######
 load("../data/KeyWestAnnualMeanTemperature.RData")
 
@@ -6,7 +12,7 @@ plot(ats) #Optional graph of Florida Mean Temperature
 FloridaTempCorrelation <- cor(ats$Year, ats$Temp) #Calulates correlation of our data
 FloridaTempCorrelation
 
-###### Rudimentary P-Value Test ######
+###### Rudimentary p-value Test ######
 SampleCorrelation <- numeric(1000000) #Sample Vector of 1000000
 
 for (i in 1:1000000) {

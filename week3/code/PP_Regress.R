@@ -1,14 +1,24 @@
+# Author: An Dao (abd21@ic.ac.uk)
+# Script: PP_Regress.R
+# Desc:   Perform predator-prey mass regression analyses
+# Date:   October 2025
+#
+
 library(tidyverse)
 
+# Read data
 my_data <- read.csv("../data/EcolArchives-E089-51-D1.csv")
 
+# Create the plot
 p <- ggplot(my_data,
             aes(Prey.mass, Predator.mass,
                 color = Predator.lifestage))
 
+# Add points and regression line with log scales
 p <- p + geom_point(shape = I(3)) + geom_smooth(method = "lm", fullrange = TRUE) +
   scale_x_log10() + scale_y_log10()
 
+# Facet the plot
 p <- p + facet_wrap(Type.of.feeding.interaction ~., ncol = 1, strip.position = "right") +
   labs(x = "Prey mass in grams", y = "Predator mass in grams") +
   theme(
@@ -24,8 +34,10 @@ p <- p + facet_wrap(Type.of.feeding.interaction ~., ncol = 1, strip.position = "
   guides(color = guide_legend(nrow = 1))
 print(p)
 
+# Save the plot
 ggsave("../results/PP_Regress_Figure.pdf", width = 8, height = 11)
 
+# Perform the regression
 regs <- my_data %>%
   group_by(Type.of.feeding.interaction, Predator.lifestage) %>%
   summarise({
@@ -34,12 +46,14 @@ regs <- my_data %>%
     
     fstat <- fpstats$fstatistic
     
+    # Calculate p-value from F-statistic
     if (!is.null(fstat) && all(is.finite(fstat))) {
       p_val <- pf(fstat[1], fstat[2], fstat[3], lower.tail = FALSE)
     } else {
       p_val <- NA_real_
     }
     
+    # Return regression statistics as a tibble
     tibble(
       slope = coef(model)[2],
       intercept = coef(model)[1],
@@ -49,4 +63,5 @@ regs <- my_data %>%
     )
   }, .groups = "drop")
 
+# Save the regression results
 write.csv(regs, "../results/PP_Regress_Results.csv", row.names = FALSE)
