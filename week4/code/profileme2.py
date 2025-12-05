@@ -1,4 +1,8 @@
-import numpy as np
+#!/usr/bin/env python3
+
+__appname__ = 'profileme2.py'
+__author__ = 'An Dao (abd21@ic.ac.uk)'
+__version__ = '0.0.1'
 
 #numpy array
 def my_squares(iters):

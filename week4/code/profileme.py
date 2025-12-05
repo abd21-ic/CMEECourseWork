@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+
+__appname__ = 'profileme.py'
+__author__ = 'An Dao (abd21@ic.ac.uk)'
+__version__ = '0.0.1'
+
 def my_squares(iters):
     out = []
     for i in range(iters):
