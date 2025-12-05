@@ -1,7 +1,13 @@
+# Author: An Dao (abd21@ic.ac.uk)
+# Script: Ricker.R
+# Desc:   Script to simulate the Ricker model.
+# Date:   October 2025
+#
+
+# Runs a simulation of the Ricker model
+# Returns a vector of length generations
 Ricker <- function(N0=1, r=1, K=10, generations=50)
 {
-  # Runs a simulation of the Ricker model
-  # Returns a vector of length generations
   
   N <- rep(NA, generations)    # Creates a vector of NA
   
@@ -13,4 +19,5 @@ Ricker <- function(N0=1, r=1, K=10, generations=50)
   return (N)
 }
 
+# Plot the Ricker model output
 plot(Ricker(generations=10), type="l")

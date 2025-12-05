@@ -1,3 +1,9 @@
+# Author: An Dao (abd21@ic.ac.uk)
+# Script: sample.R
+# Desc:   Script to compare different ways to run sampling experiments in R.
+# Date:   October 2025
+#
+
 ######### Functions ##########
 
 ## A function to take a sample of size n from a population "popn" and return its mean

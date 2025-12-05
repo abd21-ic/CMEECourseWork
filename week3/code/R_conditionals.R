@@ -1,3 +1,10 @@
+# Author: An Dao (abd21@ic.ac.uk)
+# Script: R_conditionals.R
+# Desc:   Script to illustrate conditionals in R.
+# Date:   October 2025
+#
+
+# function to check if a number is even or odd
 is.even <- function(n = 2) {
     if (n %% 2 == 0) {
         return(paste(n,"is even!"))
@@ -7,7 +14,7 @@ is.even <- function(n = 2) {
 }
 is.even(6)
 
-
+# function to check if a number is a power of 2
 is.power2 <- function(n=2) {
     if (log2(n) %% 1==0) {
         return(paste(n, "is a power of 2!"))
@@ -17,6 +24,7 @@ is.power2 <- function(n=2) {
 }
 is.power2(4)
 
+# function to check if a number is prime, composite, unit or zero
 is.prime <- function(n) {
     if (n==0) {
         return(paste(n,"is a zero!"))
@@ -32,5 +40,4 @@ is.prime <- function(n) {
         return(paste(n,"is a composite!"))
     }
 }
-
 is.prime(3)

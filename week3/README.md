@@ -176,3 +176,73 @@ R script that generates a linear regression plot with a regression line and post
 **Usage:**
 
 * Rscript plotLin.R
+
+---
+
+* preallocate.R
+
+R script which compares the performance of vector creation with and without preallocation by timing two functions.
+
+**Usage:**
+
+* Rscript preallocate.R
+
+---
+
+* R_conditionals.R
+
+R script which has three functions to illustrate conditionals:
+
+1. Function to check if a number is even or odd.
+2. Function to check if a number is a power of 2.
+3. Function to check if a number if a prime, composite, unit or 0.
+
+**Usage:**
+
+* Rscript R_conditionals.R
+
+---
+
+* Ricker.R
+
+R script that runs a simulation of the Ricker model and plots the output.
+
+**Usage:**
+
+* Rscript Ricker.R
+
+---
+
+* sample.R
+
+R script that compares multiple methods for repeatedly sampling from a population:
+
+1. For-loop without preallocation.
+2. For-loop with preallocation.
+3. For-loop with preallocated list.
+4. Vectorized sampling using `lapply()`.
+5. Vectorized sampling using `sapply()`.
+
+**Usage:**
+
+* Rscript sample.R
+
+---
+
+* try.R
+
+R script that samples repeatedly from a population and uses `try()` to catch cases where the sample has too few unique values, and stores the results using both `lapply` and a manual loop.
+
+**Usage:**
+
+* Rscript try.R
+
+---
+
+* vectorize1.R
+
+R script that compares the time taken to sum all elements of a matrix using loops vs vectorisation.
+
+**Usage:**
+
+* Rscript vectorize1.R
