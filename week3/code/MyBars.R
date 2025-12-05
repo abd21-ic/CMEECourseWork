@@ -1,4 +1,10 @@
-install.packages("ggplot2")
+# Author: An Dao (abd21@ic.ac.uk)
+# Script: MyBars.R
+# Desc:   Script to produce a bar chart with multiple lineranges.
+# Date:   October 2025
+#
+
+# install.packages("ggplot2")
 library(ggplot2)
 
 a <- read.table("../data/Results.txt", header = TRUE)

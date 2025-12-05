@@ -1,7 +1,15 @@
-install.packages("ggplot2")
+# Author: An Dao (abd21@ic.ac.uk)
+# Script: Girko.R
+# Desc:   Illustrates Girko's circle theorem.
+# Date:   October 2025
+#
+
+# Load ggplot2 package
+#install.packages("ggplot2")
 library(ggplot2)
 
-build_ellipse <- function(hradius, vradius){ # function that returns an ellipse
+# function that returns an ellipse
+build_ellipse <- function(hradius, vradius){
   npoints = 250
   a <- seq(0, 2 * pi, length = npoints + 1)
   x <- hradius * cos(a)

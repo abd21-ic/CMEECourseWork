@@ -3,3 +3,5 @@ class(MyData)
 
 MyMetaData <- read.csv("../data/PoundHillMetaData.csv",header = TRUE,  sep=";")
 class(MyMetaData)
+
+head(MyData)

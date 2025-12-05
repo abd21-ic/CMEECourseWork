@@ -1,5 +1,9 @@
-#A simple script to illustrate R input-output.
-#Run line by line and check inputs outputs to understand what is happening
+# Author: An Dao (abd21@ic.ac.uk)
+# Script: apply2.R
+# Desc:   A simple script to illustrate R input-output.
+#         Run line by line and check inputs outputs to understand what is happening
+# Date:   October 2025
+#
 
 MyData <- read.csv("../data/trees.csv", header = TRUE) #import with headers
 
