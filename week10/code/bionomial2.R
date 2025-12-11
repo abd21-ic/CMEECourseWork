@@ -1,0 +1,67 @@
+# Load required packages
+library(MASS)
+library(dplyr)
+library(lme4)
+
+
+# Read the data
+model <- read.csv("../results/binary_muntiacus_with_e.csv", stringsAsFactors = FALSE)
+
+# Ensure variables have correct types
+model$Muntiacus_present <- as.numeric(model$Muntiacus_present)
+model$distance_to_road <- as.numeric(model$distance_to_road)
+model$Station <- as.factor(model$Station)  # Treat Station as categorical
+model <- model[model$Station != "63", ]
+
+
+nb_model <- glm(Muntiacus_present ~ distance_to_road, data = model, family = binomial(link = "logit"))
+
+# Summarize the model
+summary(nb_model)
+
+
+# Fit a GLMM with Station as a random effect
+glmm_model <- glmer(
+  Muntiacus_present ~ distance_to_road + (1 | Station), 
+  data = model,
+  family = binomial(link = "logit")
+)
+
+# Summarize the model
+summary(glmm_model)
+
+anova(glmm_model, test = "Chisq")
+
+#install.packages("ggeffects")  # Uncomment if ggeffects is not installed
+library(ggeffects)
+library(ggplot2)
+
+
+pred <- ggpredict(glmm_model, terms = c("distance_to_road"))
+
+# Plot observed points (jittered) + predicted sigmoid curve
+ggplot() +
+  # Observed 0/1 points
+  geom_jitter(
+    data = model,
+    aes(x = distance_to_road, y = Muntiacus_present),
+    width = 2, height = 0, alpha = 0.1, color = "darkgreen"
+  ) +
+  # Predicted probability curve
+  geom_line(
+    data = pred,
+    aes(x = x, y = predicted),
+    color = "blue", size = 1
+  ) +
+  # 95% confidence interval
+  geom_ribbon(
+    data = pred,
+    aes(x = x, ymin = conf.low, ymax = conf.high),
+    alpha = 0.2, fill = "blue"
+  ) +
+  labs(
+    title = "Predicted Probability of Muntiacus Presence vs Road Distance (Silwood)",
+    x = "Distance to Road",
+    y = "Predicted Probability"
+  ) +
+  theme_minimal()
