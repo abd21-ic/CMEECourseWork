@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Bootcamp_Assessment_AnDao_abd21</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Bootcamp_Assessment_AnDao_abd21</h1>
+</header>
+<h1 id="bootcamp-assessment-andao">Bootcamp Assessment: AnDao</h1>
+<h2 id="execution-results">Execution results</h2>
+<h3 id="repository-structure-highlights-criterion-1-evidence">Repository
+structure highlights (Criterion 1 evidence)</h3>
+<ul>
+<li>Week-based structure detected.</li>
+<li><code>.gitignore</code> present, but missing patterns for editor
+files and results/outputs.</li>
+<li>Several <code>results/</code> directories contain generated files
+(e.g., PDFs/CSVs), which is a common learning-stage hygiene issue.</li>
+</ul>
+<h3 id="overall-script-execution-picture-criterion-2-evidence">Overall
+script execution picture (Criterion 2 evidence)</h3>
+<ul>
+<li>Many scripts run successfully, but there are:
+<ul>
+<li><strong>Interactive/headless failures</strong> (e.g., prompt for
+input in <code>csvtospace.sh</code>).</li>
+<li><strong>Timeouts</strong> (e.g., <code>Florida.R</code> exceeded the
+time limit).</li>
+<li><strong>Warnings</strong> that may indicate edge-case issues (e.g.,
+<code>PP_Regress.R</code> warnings during model/plot steps).</li>
+</ul></li>
+<li><strong>Missing expected scripts</strong>: 15 (13 taught + 2
+assigned), including missing assigned scripts <code>PP_Dists.R</code>
+and <code>run_get_TreeHeight.sh</code>.</li>
+</ul>
+<h2 id="script-specific-feedback">Script-Specific Feedback</h2>
+<blockquote>
+<p>Representative scripts chosen to cover: strong examples, assigned
+scripts, execution issues, and common style/robustness problems.</p>
+</blockquote>
+<h3 id="csvtospace.sh">csvtospace.sh</h3>
+<p>Status: <strong>Present but not validated</strong> (interactive in
+headless run)</p>
+<p>Evidence (from LOG): - Exit code: 1 - Missing from expected list: No
+(assigned script) - Tool warnings: none captured - Output validation:
+missing expected <code>*_space.txt</code></p>
+<p>Rubric relevance: - Criterion 2 (functional correctness) - Criterion
+3 (basic structure) - Criterion 8 (input handling) - Criterion 9
+(problem-solving)</p>
+<ul>
+<li>Script prompts for a filename interactively (“Please enter a csv
+file name”). In automated marking/headless use, this behaves like a
+failure even though the script is present.</li>
+</ul>
+<p>Improvement suggestion: - Convert to non-interactive CLI usage:
+<code>csvtospace.sh &lt;input.csv&gt; [output_space.txt]</code>,
+validate argument count, and exit with a helpful usage message.</p>
+<hr />
+<h3 id="align_seqs.py">align_seqs.py</h3>
+<p>Status: <strong>Runs successfully</strong> (as invoked)</p>
+<p>Evidence (from LOG): - Exit code: 0 - Missing from expected list: No
+(assigned script) - Tool warnings: none - Output validation: not
+applicable (no expected output listed for this script in the
+checker)</p>
+<p>Rubric relevance: - Criterion 2 - Criterion 3 - Criterion 9</p>
+<ul>
+<li>The script executed with no arguments and printed an alignment-like
+output. This suggests either embedded test data or default paths.</li>
+<li>For assessment robustness, alignment scripts typically need clear
+CLI argument handling (input sequences / files).</li>
+</ul>
+<p>Improvement suggestion: - Support <code>sys.argv</code> inputs with a
+short usage block; add a minimal test case or example invocation in the
+week README.</p>
+<hr />
+<h3 id="florida.r">Florida.R</h3>
+<p>Status: <strong>Present but not validated</strong> (timed out)</p>
+<p>Evidence (from LOG): - Exit code: 124 - Timed out: Yes (10s limit) -
+Stdout: produced a numeric output before timing out</p>
+<p>Rubric relevance: - Criterion 2 - Criterion 8 - Criterion 9</p>
+<ul>
+<li>There is evidence the script starts correctly and computes
+something, but the overall runtime exceeds the automated limit (or it is
+waiting on a plotting/device step or large computation).</li>
+</ul>
+<p>Improvement suggestion: - Profile the slow section, reduce data size
+for default runs, or gate expensive steps behind a flag (e.g.,
+<code>--full-run</code>).</p>
+<hr />
+<h3 id="pp_regress.r">PP_Regress.R</h3>
+<p>Status: <strong>Runs</strong> (with warnings)</p>
+<p>Evidence (from LOG): - Exit code: 0 - Tool warnings / notes:
+tidyverse attach messages + warnings (e.g., <code>NaNs produced</code>,
+<code>no non-missing arguments to max</code>, etc.) - Output validation:
+not shown in the visible excerpt (but results files exist in
+<code>week3/results/</code>)</p>
+<p>Rubric relevance: - Criterion 2 - Criterion 3 - Criterion 8 -
+Criterion 9</p>
+<ul>
+<li>The script runs end-to-end, but warnings suggest some steps may be
+using missing/empty subsets or invalid degrees of freedom in a
+CI/t-quantile calculation.</li>
+</ul>
+<p>Improvement suggestion: - Add guard clauses before regression/CI
+calculations (check <code>nrow(df)</code>, missingness), and print a
+clear message when insufficient data are present.</p>
+<hr />
+<h3 id="treeheight.r">TreeHeight.R</h3>
+<p>Status: <strong>Runs successfully</strong></p>
+<p>Evidence (from LOG): - Exit code: 0 - No stderr / warnings shown</p>
+<p>Rubric relevance: - Criterion 2 - Criterion 3 - Criterion 9</p>
+<ul>
+<li>This is a strong “baseline” script: runs cleanly and likely produces
+expected outputs (a corresponding <code>TreeHts.csv</code> exists in
+results).</li>
+</ul>
+<p>Improvement suggestion: - Add a short header comment describing
+inputs/outputs and ensure outputs go to <code>results/</code> (not
+<code>code/</code>), then ignore them via <code>.gitignore</code> if not
+required to commit.</p>
+<hr />
+<h3 id="tiff2_png.sh">tiff2_png.sh</h3>
+<p>Status: <strong>Missing</strong> (expected taught script)</p>
+<p>Evidence (from LOG): - Listed under “Missing taught scripts”:
+<code>tiff2_png.sh</code></p>
+<p>Rubric relevance: - Criterion 2 - Criterion 4 (if referenced in
+README) - Criterion 11 (coverage/progression)</p>
+<ul>
+<li>Missing expected conversion script reduces completeness.</li>
+</ul>
+<p>Improvement suggestion: - Restore the taught script (or ensure naming
+matches exactly). If you created a variant (e.g.,
+<code>tiff2png.sh</code>), keep the expected name or symlink/copy to
+match.</p>
+<hr />
+<h3 id="pp_dists.r">PP_Dists.R</h3>
+<p>Status: <strong>Missing</strong> (expected assigned script)</p>
+<p>Evidence (from LOG): - Listed under “Missing assigned scripts”:
+<code>PP_Dists.R</code></p>
+<p>Rubric relevance: - Criterion 2 - Criterion 9</p>
+<p>Improvement suggestion: - Re-add the script (or check naming/case).
+If it exists under a different name, standardise to the expected
+filename.</p>
+<hr />
+<h3 id="run_get_treeheight.sh">run_get_TreeHeight.sh</h3>
+<p>Status: <strong>Missing</strong> (expected assigned script)</p>
+<p>Evidence (from LOG): - Listed under “Missing assigned scripts”:
+<code>run_get_TreeHeight.sh</code></p>
+<p>Rubric relevance: - Criterion 2 - Criterion 8 - Criterion 9</p>
+<ul>
+<li>Wrapper scripts are often used to standardise inputs/paths; missing
+it weakens reproducibility and ease-of-running.</li>
+</ul>
+<p>Improvement suggestion: - Provide the runner script with argument
+checks and relative paths; document a one-line usage example in the
+README.</p>
+<hr />
+<h3 id="tautocorr.r">TAutoCorr.R</h3>
+<p>Evidence (from LOG): - Exit code: 0 - Prints observed successive-year
+correlation and permutation p-value - Writes results text file and saves
+a histogram PNG of the null distribution</p>
+<p>Rubric relevance: - Criterion 2 - Criterion 3 - Criterion 8 -
+Criterion 9 - Criterion 10 - Criterion 11</p>
+<ul>
+<li>Correct end-to-end implementation of the required permutation
+approach and clear reporting via stdout + saved outputs.</li>
+</ul>
+<p>Improvement suggestion: - Ensure the R script runs without depending
+on non-standard packages unless they are installed/checked
+gracefully.</p>
+<h2 id="detailed-evaluation-tautocorr.r">Detailed Evaluation:
+TAutoCorr.R</h2>
+<h3 id="a.-specification-alignment">A. Specification Alignment</h3>
+<ul>
+<li>✅ Uses <strong>relative paths</strong> via
+<code>here::here(...)</code> and runs without interactive input.</li>
+<li>✅ Computes <strong>observed successive-year correlation</strong>
+using <code>cor(Temp[t], Temp[t+1])</code>.</li>
+<li>✅ Generates <strong>(n-1) adjacent-year pairs</strong> via indexing
+<code>temps[-length(temps)]</code> and <code>temps[-1]</code>.</li>
+<li>✅ Performs <strong>permutation analysis</strong> by shuffling the
+temperature series and recomputing the successive-year correlation.</li>
+<li>✅ Computes an <strong>approximate p-value</strong> as the fraction
+of permuted correlations ≥ observed (one-sided).</li>
+<li>✅ Avoids using <code>cor.test()</code> as the final p-value.</li>
+</ul>
+<h3 id="b.-conceptual-understanding-of-autocorrelation">B. Conceptual
+Understanding of Autocorrelation</h3>
+<ul>
+<li>Correctly targets <em>adjacent-year</em> dependence (lag-1
+autocorrelation proxy).</li>
+<li>Permutation null correctly breaks temporal order, appropriate for
+testing “is there temporal structure?”.</li>
+</ul>
+<p>Alignment: - Criterion 2: strong evidence - Criterion 9: strong
+evidence - Criterion 10: some evidence (stdout + saved outputs), but
+missing the required formal write-up</p>
+<h3 id="c.-algorithmic-implementation-depth-vs-example-solution">C.
+Algorithmic Implementation Depth (vs example solution)</h3>
+<ul>
+<li>Uses vector indexing for adjacent pairs (clean, idiomatic R).</li>
+<li>Uses an explicit permutation loop (clear, and acceptable for
+bootcamp scale; <code>n_perm = 10000</code> is reasonable).</li>
+<li>Produces an additional histogram figure and a results text file (a
+useful extension beyond a minimal implementation).</li>
+</ul>
+<h3 id="d.-statistical-computational-rigor">D. Statistical &amp;
+Computational Rigor</h3>
+<ul>
+<li>Uses <code>cor()</code> for correlation coefficients (acceptable per
+specification).</li>
+<li>One-sided p-value (<code>perm_cor &gt;= obs_cor</code>) is clearly
+stated as one-sided; good clarity.</li>
+</ul>
+<p>Potential refinement: - Consider handling <code>NA</code> values
+explicitly (e.g., <code>use="complete.obs"</code>) if the data can
+contain missing values.</p>
+<h3 id="e.-error-handling-robustness-criterion-8">E. Error Handling
+&amp; Robustness (Criterion 8)</h3>
+<ul>
+<li>Positive: checks that package <code>here</code> exists and fails
+with an informative message if missing.</li>
+<li>Missing/limited: no explicit check that the data file exists before
+<code>load()</code>; no check that <code>Temp</code> column exists.</li>
+</ul>
+<h3 id="f.-comparison-with-example-solution">F. Comparison with Example
+Solution</h3>
+<h4 id="similarities">Similarities</h4>
+<ul>
+<li>Computes lag-1 correlation via adjacent-year pairs.</li>
+<li>Uses permutation shuffling and recomputes the statistic.</li>
+<li>Reports observed statistic and permutation-based p-value.</li>
+</ul>
+<h2 id="overall-feedback">Overall feedback</h2>
+<ul>
+<li><strong>Keep the good momentum on “core logic” scripts.</strong>
+<code>TreeHeight.R</code> (clean run) and <code>TAutoCorr.R</code>
+(correct permutation logic + saved outputs) show strong alignment with
+taught patterns.</li>
+<li><strong>Close the “completeness gaps” first.</strong> Two assigned
+scripts (<code>PP_Dists.R</code>, <code>run_get_TreeHeight.sh</code>)
+and several taught scripts are missing.</li>
+<li><strong>De-interactive scripts for reproducibility.</strong>
+<code>csvtospace.sh</code> should take CLI args rather than prompt for
+input; this will also help produce the expected <code>*_space.txt</code>
+output.</li>
+<li><strong>Tighten documentation habits.</strong> The root README is
+very short and only 4/9 weeks have a README. Add a per-week README
+template with: purpose, “how to run”, expected inputs/outputs, and a 1–2
+line interpretation for analysis scripts.</li>
+<li><strong>Add basic defensive checks.</strong> Many scripts would
+benefit from 2–3 lines of validation: file exists, columns present, and
+meaningful error messages rather than warnings or silent oddities.</li>
+<li><strong>Git messages practice is good.</strong> Next step: introduce
+simple feature/topic branches for non-trivial changes (even in an
+individual repo) to demonstrate branching fluency.</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>Overall, very good work!</p>
+<p>Strengths: - Clear evidence of genuine engagement and
+problem-solving. - Good Git commit volume and high-quality commit
+messages.</p>
+<p>Main limitations: - Multiple missing expected scripts (including
+assigned ones). - Interactive/timeout behaviour preventing automated
+validation in some cases. - Documentation thin at the repo and per-week
+level.</p>
+<h2 id="mark-classification">Mark classification</h2>
+<!-- Total Mark: 67/100   -->
+<p>Classification: Merit</p>
+</body>
+</html>
